@@ -1,2 +1,142 @@
 @import './sass/reset.scss';
 @import './sass/base.scss';
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap');
+
+body {
+  font-family: 'spartan', sans-serif;
+}
+
+/* Responsive */
+$tablets: "only screen and (min-width: 768px)";
+$md: "only screen and (min-width: 1024px)";
+$lg: "only screen and (min-width: 1440px)";
+
+/* Colors */
+$white: #FFF;
+$very-dark-blue:#1B1D23;
+$dark-grey:#60636D;
+$medium-grey:#7D828F;
+$light-grey: #C8CCD8;
+$very-light-grey:#EEEFF4;
+$red:#DF5656;
+
+button {
+  cursor: pointer;
+}
+
+// Nav
+.nav {
+  background-color: $very-dark-blue;
+
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+    border-bottom: 1px solid $very-light-grey;
+    margin-bottom: 2rem;
+    @media #{$tablets} {
+      padding: 2rem 1rem;
+    }
+    @media #{$md} {
+      padding: 2rem 2rem;
+    }
+  }
+
+  &-logo {
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    @media #{$tablets} {
+      font-size: 2rem;
+    }
+    width: 100px;
+    @media #{$tablets} {
+      width: 120px;
+    }
+    @media #{$md} {
+      width: 140px;
+    }
+  }
+
+  &-menu {
+    background-color: $red;
+    width: 32px;
+    aspect-ratio: 1;
+  }
+}
+
+.main {
+  padding: 0 1rem;
+  @media #{$tablets} {
+
+    padding: 0 2rem;
+  }
+  @media #{$md} {
+    padding: 0 4rem;
+  }
+}
+
+.filter {
+  &-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+}
+
+.card {
+  width: 252px;
+  height: 252px;
+  background-color: $medium-grey;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 1fr;
+    gap: 1rem;
+    justify-items: center;
+
+    @media #{$tablets} {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+    }
+    @media #{$md} {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &-body {
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    @media #{$tablets} {
+      align-items: flex-start;
+    }
+  }
+  &-inner {
+    padding: 1rem;
+
+  }
+}

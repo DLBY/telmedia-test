@@ -7,9 +7,32 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app">
-      Test
-    </div>
+      <!-- NAV START -->
+      <nav class="nav">
+        <div class="nav-inner">
+          <div class="nav-logo">
+            Hello
+          </div>
+          <div class="nav-menu"></div>
+        </div>
+      </nav>
+      <!-- NAV END -->
+
+      <main class="main">
+        <!-- FILTER START -->
+        <div class="filter-container">
+          <button class="filter-button" data-category="all" id="reset">Tout</button>
+          <div  id="category-buttons"></div>
+        </div>
+        <!-- FILTER END -->
+
+        <!-- Cards CONTAINER START -->
+        <section>
+          <div class="card-grid" id="products">
+          </div>
+        </section>
+        <!-- Cards CONTAINER END -->
+      </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
