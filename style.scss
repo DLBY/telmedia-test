@@ -14,9 +14,7 @@ $lg: "only screen and (min-width: 1440px)";
 /* Colors */
 $white: #FFF;
 $very-dark-blue:#1B1D23;
-$dark-grey:#60636D;
 $medium-grey:#7D828F;
-$light-grey: #C8CCD8;
 $very-light-grey:#EEEFF4;
 $red:#DF5656;
 
@@ -91,7 +89,6 @@ button {
 .card {
   width: 252px;
   height: 252px;
-  background-color: $medium-grey;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -137,6 +134,5 @@ button {
   }
   &-inner {
     padding: 1rem;
-
   }
 }
